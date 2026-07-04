@@ -1,0 +1,77 @@
+:root{
+/* =========================================
+   COLORS
+========================================= */
+    --primary-color: #2563EB;
+    --primary-hover-color: #1D4ED8;
+    --secondary-color: #10B981;
+    --accent-color: #F59E0B;
+    --white-color: #ffffff;
+    --background-color: #F8FAFC;
+    --text-color: #0F172A;
+    --muted-text-color: #475569;
+    --border-color: #E2E8F0;
+    --success-color: #16A34A;
+    --warning-color: #D97706;
+    --error-color: #DC2626;
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Inter', sans-serif;
+    --display-size: 4rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 2.5rem;
+    --h3-font-size: 2rem;
+    --h4-font-size: 1.5rem;
+    --h5-font-size: 1.25rem;
+    --body-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --regular-font-weight: 400;
+    --medium-font-weight: 500;
+    --semi-bold-font-weight: 600;
+    --bold-font-weight: 700;
+/* =========================================
+   SPACING
+========================================= */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+    --spacing-4xl: 96px;
+/* =========================================
+   BORDER RADIUS
+========================================= */
+    --border-radius-sm: 6px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
+    --border-radius-pill: 9999px;
+/* =========================================
+   SHADOWS
+========================================= */
+    --shadow-small: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 10px 15px rgba(0, 0, 0, 0.1);
+/* =========================================
+   TRANSITIONS
+========================================= */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+/* =========================================
+   LAYOUT
+========================================= */
+    --container-width: 1200px;
+    --navbar-height: 64px;
+    --footer-spacing: var(--spacing-lg);
+/* =========================================
+   Z-INDEX
+========================================= */
+    --z-dropdown: 1000;
+    --z-sticky-navbar: 1020;
+    --z-modal: 1030;
+    --z-tooltip: 1040;
+}
