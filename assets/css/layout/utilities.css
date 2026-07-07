@@ -1,0 +1,112 @@
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+/* Container */
+
+.container {
+    width: min(var(--container-width), calc(100% - 2rem));
+    margin-inline: auto;
+}
+
+/* Section */
+
+.section {
+    padding: 6rem 0;
+}
+
+/* Alternate section background */
+
+.section-light {
+    background: var(--white);
+}
+
+.section-gray {
+    background: var(--gray-50);
+}
+
+.section-dark {
+    background: var(--dark-bg);
+    color: var(--white);
+}
+
+/* Grid */
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+/* Flex */
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Text */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/* Width */
+
+.w-100 {
+    width: 100%;
+}
+
+/* Margin */
+
+.mt-1 {
+    margin-top: .5rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.mt-3 {
+    margin-top: 2rem;
+}
+
+.mt-4 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: .5rem;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+.mb-3 {
+    margin-bottom: 2rem;
+}
+
+.mb-4 {
+    margin-bottom: 3rem;
+}
+
+/* Hidden */
+
+.hidden {
+    display: none !important;
+}

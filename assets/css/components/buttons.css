@@ -1,0 +1,89 @@
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+
+    padding: .95rem 2rem;
+
+    border: none;
+    border-radius: var(--radius-pill);
+
+    cursor: pointer;
+
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+
+    transition: all var(--transition-normal);
+
+    white-space: nowrap;
+}
+
+/* ==========================
+   PRIMARY
+========================== */
+
+.btn-primary {
+
+    background: var(--primary-color);
+
+    color: var(--white);
+
+}
+
+.btn-primary:hover {
+
+    background: var(--primary-hover);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+/* ==========================
+   OUTLINE
+========================== */
+
+.btn-outline {
+
+    background: transparent;
+
+    color: var(--primary-color);
+
+    border: 2px solid var(--primary-color);
+
+}
+
+.btn-outline:hover {
+
+    background: var(--primary-color);
+
+    color: var(--white);
+
+}
+
+/* ==========================
+   WHITE
+========================== */
+
+.btn-white {
+
+    background: var(--white);
+
+    color: var(--primary-color);
+
+}
+
+.btn-white:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-md);
+
+}

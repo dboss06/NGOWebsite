@@ -1,0 +1,86 @@
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+.fade-up,
+.fade-down,
+.fade-left,
+.fade-right,
+.zoom-in {
+    opacity: 0;
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.fade-up {
+    transform: translateY(40px);
+}
+
+.fade-down {
+    transform: translateY(-40px);
+}
+
+.fade-left {
+    transform: translateX(-40px);
+}
+
+.fade-right {
+    transform: translateX(40px);
+}
+
+.zoom-in {
+    transform: scale(.9);
+}
+
+.show {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* Floating */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+/* Rotation */
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+/* Pulse */
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}

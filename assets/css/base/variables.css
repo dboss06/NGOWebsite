@@ -1,167 +1,162 @@
-/*
-==========================================================
- NGO CSS Framework v1.0
- Author: Divine
- Description:
- Design tokens for the HopeBridge Foundation website.
-==========================================================
-*/
+/* ==========================================================
+   FOUNDATION FOR THE DEVELOPMENT OF RURAL AND
+   UNDERPRIVILEGED WOMEN AND CHILDREN
+
+   VARIABLES
+========================================================== */
 
 :root {
 
-    /* =========================================
+   /* ======================================================
        COLORS
-    ========================================= */
+    ====================================================== */
 
-    --primary-color: #2563EB;
-    --primary-color-hover: #1D4ED8;
+   --primary-color: #2E7D32;
+   --primary-hover: #256728;
+   --primary-light: #E8F5E9;
 
-    --secondary-color: #10B981;
-    --secondary-color-hover: #059669;
+   --secondary-color: #1565C0;
+   --secondary-hover: #0D47A1;
+   --secondary-light: #E3F2FD;
 
-    --accent-color: #F59E0B;
-    --accent-color-hover: #D97706;
+   --accent-color: #F4B400;
+   --accent-hover: #D89B00;
 
-    --success-color: #16A34A;
-    --warning-color: #D97706;
-    --error-color: #DC2626;
+   --success-color: #16A34A;
+   --warning-color: #F59E0B;
+   --danger-color: #DC2626;
 
-    --white-color: #FFFFFF;
-    --black-color: #000000;
+   /* Neutral Colors */
 
-    --background-color: #F8FAFC;
-    --surface-color: #FFFFFF;
+   --white: #FFFFFF;
 
-    --text-color: #0F172A;
-    --text-light: #FFFFFF;
-    --text-muted: #64748B;
+   --gray-50: #F9FAFB;
+   --gray-100: #F3F4F6;
+   --gray-200: #E5E7EB;
+   --gray-300: #D1D5DB;
+   --gray-400: #9CA3AF;
+   --gray-500: #6B7280;
+   --gray-600: #4B5563;
+   --gray-700: #374151;
+   --gray-800: #1F2937;
+   --gray-900: #111827;
 
-    --border-color: #E2E8F0;
-    --divider-color: #CBD5E1;
+   /* Backgrounds */
 
-    /* =========================================
+   --body-bg: #F8FAFC;
+   --section-bg: #FFFFFF;
+   --dark-bg: #111827;
+
+   /* Text */
+
+   --text-primary: #1F2937;
+   --text-secondary: #6B7280;
+   --text-light: #FFFFFF;
+
+   /* Borders */
+
+   --border-color: #E5E7EB;
+
+   /* ======================================================
        TYPOGRAPHY
-    ========================================= */
+    ====================================================== */
 
-    --heading-font: "Poppins", sans-serif;
-    --body-font: "Inter", sans-serif;
+   --font-heading: "Poppins", sans-serif;
+   --font-body: "Inter", sans-serif;
 
-    /* Font Sizes */
+   --fw-light: 300;
+   --fw-regular: 400;
+   --fw-medium: 500;
+   --fw-semibold: 600;
+   --fw-bold: 700;
+   --fw-extrabold: 800;
 
-    --font-display: 4rem;
-    --font-h1: 3rem;
-    --font-h2: 2.5rem;
-    --font-h3: 2rem;
-    --font-h4: 1.5rem;
-    --font-h5: 1.25rem;
+   /* Font Sizes */
 
-    --font-body-lg: 1.125rem;
-    --font-body: 1rem;
-    --font-small: .875rem;
-    --font-caption: .75rem;
+   --fs-xs: .75rem;
+   --fs-sm: .875rem;
+   --fs-base: 1rem;
+   --fs-lg: 1.125rem;
+   --fs-xl: 1.25rem;
+   --fs-2xl: 1.5rem;
+   --fs-3xl: 2rem;
+   --fs-4xl: 2.75rem;
+   --fs-5xl: 3.5rem;
+   --fs-6xl: 4.5rem;
 
-    /* Font Weights */
-
-    --font-light: 300;
-    --font-regular: 400;
-    --font-medium: 500;
-    --font-semi-bold: 600;
-    --font-bold: 700;
-    --font-extra-bold: 800;
-
-    /* Line Heights */
-
-    --line-height-heading: 1.2;
-    --line-height-body: 1.6;
-    --line-height-relaxed: 1.8;
-
-    /* Letter Spacing */
-
-    --letter-spacing-tight: -.02em;
-    --letter-spacing-normal: 0;
-    --letter-spacing-wide: .05em;
-
-    /* =========================================
+   /* ======================================================
        SPACING
-    ========================================= */
+    ====================================================== */
 
-    --spacing-xs: .25rem;
-    --spacing-sm: .5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    --spacing-2xl: 3rem;
-    --spacing-3xl: 4rem;
-    --spacing-4xl: 6rem;
-    --spacing-5xl: 8rem;
+   --space-1: .25rem;
+   --space-2: .5rem;
+   --space-3: .75rem;
+   --space-4: 1rem;
+   --space-5: 1.5rem;
+   --space-6: 2rem;
+   --space-7: 3rem;
+   --space-8: 4rem;
+   --space-9: 5rem;
+   --space-10: 6rem;
 
-    /* =========================================
+   /* ======================================================
        BORDER RADIUS
-    ========================================= */
+    ====================================================== */
 
-    --radius-sm: 6px;
-    --radius-md: 12px;
-    --radius-lg: 20px;
-    --radius-xl: 30px;
-    --radius-pill: 9999px;
-    --radius-circle: 50%;
+   --radius-sm: .5rem;
+   --radius-md: .75rem;
+   --radius-lg: 1rem;
+   --radius-xl: 1.5rem;
+   --radius-2xl: 2rem;
+   --radius-pill: 999px;
 
-    /* =========================================
+   /* ======================================================
        SHADOWS
-    ========================================= */
+    ====================================================== */
 
-    --shadow-sm: 0 1px 2px rgba(15, 23, 42, .08);
+   --shadow-sm:
+      0 2px 8px rgba(0, 0, 0, .05);
 
-    --shadow-md: 0 6px 18px rgba(15, 23, 42, .10);
+   --shadow-md:
+      0 10px 30px rgba(0, 0, 0, .08);
 
-    --shadow-lg: 0 12px 30px rgba(15, 23, 42, .12);
+   --shadow-lg:
+      0 20px 50px rgba(0, 0, 0, .12);
 
-    --shadow-xl: 0 20px 40px rgba(15, 23, 42, .15);
-
-    /* =========================================
+   /* ======================================================
        TRANSITIONS
-    ========================================= */
+    ====================================================== */
 
-    --transition-fast: 150ms ease;
+   --transition-fast: .25s ease;
 
-    --transition-normal: 300ms ease;
+   --transition-normal: .4s ease;
 
-    --transition-slow: 500ms ease;
+   --transition-slow: .7s ease;
 
-    /* =========================================
-       LAYOUT
-    ========================================= */
+   /* ======================================================
+       CONTAINER
+    ====================================================== */
 
-    --container-width: 1200px;
-    --container-padding: 1rem;
+   --container-width: 1200px;
 
-    --section-spacing: 6rem;
+   --container-padding: 1rem;
 
-    --navbar-height: 90px;
+   /* ======================================================
+       HEADER
+    ====================================================== */
 
-    --footer-padding: 4rem;
+   --header-height: 80px;
 
-    /* =========================================
-       BREAKPOINTS
-    ========================================= */
-
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --breakpoint-2xl: 1400px;
-
-    /* =========================================
+   /* ======================================================
        Z-INDEX
-    ========================================= */
+    ====================================================== */
 
-    --z-dropdown: 1000;
-    --z-sticky: 1020;
-    --z-fixed: 1030;
-    --z-offcanvas: 1040;
-    --z-modal: 1050;
-    --z-popover: 1060;
-    --z-tooltip: 1070;
-    --z-toast: 1080;
+   --z-dropdown: 100;
+
+   --z-sticky: 500;
+
+   --z-fixed: 1000;
+
+   --z-modal: 5000;
 
 }
