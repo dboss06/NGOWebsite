@@ -1,195 +1,373 @@
-/* ==========================================================
+/* ==========================================
    HERO
-========================================================== */
+========================================== */
+
 .hero {
+
     position: relative;
+
     min-height: 100vh;
+
     display: flex;
+
     align-items: center;
+
     overflow: hidden;
+
 }
 
-/* =============================
-   Slideshow
-============================= */
+/* ============================= */
+
 .hero-slideshow {
+
     position: absolute;
+
     inset: 0;
-    z-index: 1;
+
 }
 
 .hero-slide {
+
     position: absolute;
+
     inset: 0;
+
     background-size: cover;
+
     background-position: center;
+
     opacity: 0;
+
     transform: scale(1);
-    transition: opacity 1.2s ease, transform 8s ease;
+
+    transition:
+        opacity 1.2s ease,
+        transform 8s linear;
+
 }
 
 .hero-slide.active {
+
     opacity: 1;
+
     transform: scale(1.08);
+
 }
 
-/* =============================
-   Overlay
-============================= */
+/* ============================= */
+
 .hero-overlay {
+
     position: absolute;
+
     inset: 0;
-    background: linear-gradient(110deg, rgba(15, 40, 20, .78), rgba(20, 20, 20, .45), rgba(15, 60, 35, .55));
-    z-index: 2;
+
+    background:
+        linear-gradient(110deg,
+            rgba(12, 40, 18, .78),
+            rgba(20, 20, 20, .45),
+            rgba(20, 70, 40, .55));
+
 }
 
-/* =============================
-   Container
-============================= */
-.hero .container {
+/* ============================= */
+
+.hero-wrapper {
+
     position: relative;
-    z-index: 5;
-    width: 100%;
-}
 
-/* =============================
-   Glass Card
-============================= */
-.hero-content {
-    max-width: 620px;
-    padding: 3rem;
-    margin-left: 7rem;
-    margin-top: 6rem;
-    border-radius: 28px;
-    background: rgba(255, 255, 255, .08);
-    backdrop-filter: blur(18px);
-    border: 1px solid rgba(255, 255, 255, .15);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
-    transition: opacity .35s ease, transform .35s ease;
-}
+    z-index: 10;
 
-.hero-content.fade-out {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-/* =============================
-   Tag
-============================= */
-.hero-tag {
-    display: inline-block;
-    padding: .65rem 1.3rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .12);
-    color: white;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-}
-
-/* =============================
-   Heading
-============================= */
-.hero h1 {
-    color: white;
-    font-size: 4rem;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-}
-
-/* =============================
-   Paragraph
-============================= */
-.hero p {
-    color: rgba(255, 255, 255, .92);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 2.2rem;
-}
-
-/* =============================
-   Buttons
-============================= */
-.hero-buttons {
     display: flex;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+}
+
+/* ============================= */
+
+.hero-content {
+
+    max-width: 640px;
+
+    padding: 3rem;
+
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .25);
+
+    transition: .35s;
+
+}
+
+/* ============================= */
+
+.hero-tag {
+
+    display: inline-block;
+
+    padding: .7rem 1.4rem;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, .12);
+
+    color: #fff;
+
+    margin-bottom: 1.5rem;
+
+    font-weight: 600;
+
+}
+
+.hero h1 {
+
+    color: #fff;
+
+    font-size: clamp(1.5rem, 6vw, 3rem);
+
+    line-height: 1.05;
+
+    margin-bottom: 1.5rem;
+
+}
+
+.hero p {
+
+    color: rgba(255, 255, 255, .9);
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 2rem;
+
+}
+
+/* ============================= */
+
+.hero-buttons {
+
+    display: flex;
+
     gap: 1rem;
+
     flex-wrap: wrap;
+
 }
 
 .hero-outline {
+
     border: 2px solid rgba(255, 255, 255, .5);
-    color: white;
+
+    color: #fff;
+
 }
 
 .hero-outline:hover {
-    background: white;
+
+    background: #fff;
+
     color: var(--primary-color);
+
 }
 
-/* =============================
-   Pagination
-============================= */
+/* ============================= */
+
 .hero-pagination {
+
     position: absolute;
-    right: 3rem;
-    bottom: 3rem;
+
+    right: 40px;
+
+    bottom: 40px;
+
     display: flex;
+
     gap: .7rem;
-    z-index: 10;
+
+    z-index: 50;
+
 }
 
 .hero-dot {
+
     width: 14px;
+
     height: 14px;
+
     border: none;
-    border-radius: 999px;
-    cursor: pointer;
+
+    border-radius: 50%;
+
     background: rgba(255, 255, 255, .35);
+
+    cursor: pointer;
+
     transition: .35s;
+
 }
 
 .hero-dot.active {
+
     width: 42px;
-    background: white;
+
+    border-radius: 999px;
+
+    background: #fff;
+
 }
 
-/* =============================
-   Progress
-============================= */
+/* ============================= */
+
 .hero-progress {
+
     position: absolute;
-    top: 0;
-    left: 0;
+
+    inset: 0 auto auto 0;
+
     width: 100%;
+
     height: 4px;
+
+    z-index: 50;
+
     background: rgba(255, 255, 255, .15);
-    z-index: 10;
+
 }
 
 .hero-progress-bar {
-    display: block;
-    width: 0;
+
     height: 100%;
+
+    width: 0;
+
+    display: block;
+
     background: var(--primary-color);
+
 }
 
-/* =============================
-   Scroll Indicator
-============================= */
+/* ============================= */
+
 .scroll-indicator {
+
     position: absolute;
+
     left: 50%;
-    bottom: 30px;
+
+    bottom: 35px;
+
     transform: translateX(-50%);
-    color: white;
+
+    color: #fff;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     gap: .5rem;
-    z-index: 10;
-    animation: float 2s ease-in-out infinite;
+
+    z-index: 50;
+
 }
 
 .scroll-indicator svg {
+
     width: 22px;
-    height: 22px;
+
+}
+
+/* =============================
+   TABLET
+============================= */
+
+@media(max-width:992px) {
+
+    .hero {
+
+        padding: 7rem 0 4rem;
+
+    }
+
+    .hero-wrapper {
+
+        min-height: auto;
+
+    }
+
+    .hero-content {
+
+        max-width: 100%;
+
+        padding: 2.5rem;
+
+    }
+
+    .hero-pagination {
+
+        right: 25px;
+
+        bottom: 25px;
+
+    }
+
+}
+
+/* =============================
+   PHONE
+============================= */
+
+@media(max-width:768px) {
+
+    .hero {
+
+        text-align: center;
+
+    }
+
+    .hero-content {
+
+        padding: 2rem;
+
+    }
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+    .hero h1 {
+
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+
+    }
+
+    .hero p {
+
+        font-size: 1rem;
+
+    }
+
+    .hero-pagination {
+
+        left: 50%;
+
+        right: auto;
+
+        transform: translateX(-50%);
+
+    }
+
 }

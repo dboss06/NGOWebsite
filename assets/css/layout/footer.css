@@ -1,0 +1,241 @@
+/*=========================================
+FOOTER
+=========================================*/
+
+.footer {
+
+    background: #111827;
+
+    color: #d1d5db;
+
+    padding: 5rem 0 2rem;
+
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 4rem;
+
+    margin-bottom: 3rem;
+
+}
+
+.footer-about img {
+
+    width: 90px;
+
+    margin-bottom: 1.5rem;
+
+}
+
+.footer-about p {
+
+    line-height: 1.9;
+
+    max-width: 420px;
+
+    color: #9ca3af;
+
+}
+
+/*=========================
+Headings
+=========================*/
+
+.footer h4 {
+
+    color: #fff;
+
+    margin-bottom: 1.5rem;
+
+    font-size: 1.2rem;
+
+}
+
+/*=========================
+Links
+=========================*/
+
+.footer-links,
+
+.footer-contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+}
+
+.footer-links a {
+
+    color: #9ca3af;
+
+    transition: .3s;
+
+}
+
+.footer-links a:hover {
+
+    color: #fff;
+
+    padding-left: 8px;
+
+}
+
+/*=========================
+Contact
+=========================*/
+
+.footer-contact li {
+
+    display: flex;
+
+    gap: .8rem;
+
+    align-items: flex-start;
+
+    color: #9ca3af;
+
+}
+
+.footer-contact svg {
+
+    width: 18px;
+
+    height: 18px;
+
+    color: var(--primary-color);
+
+    flex-shrink: 0;
+
+}
+
+/*=========================
+Socials
+=========================*/
+
+.footer-socials {
+
+    display: flex;
+
+    gap: 1rem;
+
+    margin-top: 2rem;
+
+}
+
+.footer-socials a {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, .08);
+
+    color: white;
+
+    transition: .3s;
+
+}
+
+.footer-socials a:hover {
+
+    background: var(--primary-color);
+
+    transform: translateY(-4px);
+
+}
+
+/*=========================
+Bottom
+=========================*/
+
+.footer-bottom {
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+
+    padding-top: 2rem;
+
+    text-align: center;
+
+}
+
+.footer-bottom p {
+
+    color: #9ca3af;
+
+    font-size: .95rem;
+
+}
+
+@media (max-width: 992px) {
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+        text-align: center;
+
+    }
+
+    .footer-about {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .footer-about p {
+
+        max-width: 600px;
+
+    }
+
+    .footer-socials {
+
+        justify-content: center;
+
+    }
+
+    .footer-contact li {
+
+        justify-content: center;
+
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .footer {
+
+        padding: 4rem 0 2rem;
+
+    }
+
+    .footer-about img {
+
+        width: 70px;
+
+    }
+
+}

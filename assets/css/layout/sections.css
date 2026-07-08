@@ -1,212 +1,129 @@
-/* ==========================================================
-   ABOUT
-========================================================== */
+/*==========================================
+ABOUT
+==========================================*/
 
 .about {
-    position: relative;
+
     padding: 8rem 0;
-    background: #F8F8F4;
-    overflow: hidden;
-}
 
-/* Decorative Background */
-
-.about::before {
-    content: "";
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: rgba(46, 125, 50, .05);
-    border-radius: 50%;
-    top: -200px;
-    right: -180px;
-    filter: blur(10px);
-}
-
-.about::after {
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: rgba(46, 125, 50, .04);
-    border-radius: 50%;
-    bottom: -100px;
-    left: -80px;
-}
-
-/* ==========================
-   Section Header
-========================== */
-
-.section-header {
-
-    max-width: 760px;
-
-    margin: 0 auto 5rem;
-
-    text-align: center;
+    background: #f8f8f4;
 
 }
-
-.section-tag {
-
-    display: inline-flex;
-
-    padding: .6rem 1.3rem;
-
-    border-radius: 999px;
-
-    background: rgba(46, 125, 50, .08);
-
-    color: var(--primary-color);
-
-    font-weight: 700;
-
-    margin-bottom: 1.25rem;
-
-}
-
-.section-header h2 {
-
-    font-size: clamp(2.6rem, 5vw, 3.8rem);
-
-    line-height: 1.15;
-
-    color: #1f2937;
-
-    margin-bottom: 1.5rem;
-
-}
-
-.section-header p {
-
-    color: #6b7280;
-
-    font-size: 1.1rem;
-
-    line-height: 1.9;
-
-}
-
-/* ==========================
-   Layout
-========================== */
 
 .about-wrapper {
 
     display: grid;
 
-    grid-template-columns: 1.15fr .85fr;
+    grid-template-columns: 1.1fr .9fr;
 
     gap: 5rem;
 
     align-items: center;
 
-}
-
-/* ==========================
-   Image
-========================== */
-
-.about-image {
-
-    position: relative;
+    margin-top: 5rem;
 
 }
 
-.about-shape {
-
-    position: absolute;
-
-    width: 180px;
-
-    height: 180px;
-
-    background: #4CAF50;
-
-    opacity: .12;
-
-    border-radius: 50%;
-
-    top: -30px;
-
-    left: -40px;
-
-    z-index: 0;
-
+.section-header {
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    text-align: center;
 }
+
+.section-tag {
+    display: inline-block;
+    font-size: .9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.15;
+    margin: 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+/* Image */
 
 .about-image img {
-
-    position: relative;
-
-    z-index: 2;
-
     width: 100%;
-
+    height: 680px;
+    object-fit: cover;
     border-radius: 28px;
-
     display: block;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .12);
+}
 
-    box-shadow: 0 30px 70px rgba(0, 0, 0, .18);
+/* Right Side */
 
-    transition: .5s;
+.about-label {
+
+    display: inline-block;
+
+    color: var(--primary-color);
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    margin-bottom: 1rem;
 
 }
 
-.about-image:hover img {
-
-    transform: translateY(-8px);
-
+.about-content h3 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
 }
 
-/* ==========================
-   Highlight Cards
-========================== */
+.about-content>p {
+    font-size: 1.08rem;
+    line-height: 1.9;
+    color: #666;
+    margin-bottom: 2.5rem;
+}
 
-.about-highlights {
 
+/* Cards */
+.about-features {
     display: flex;
-
     flex-direction: column;
-
-    gap: 1.25rem;
-
+    gap: 1.2rem;
 }
 
-.highlight-card {
-
+.feature {
     display: flex;
-
-    align-items: flex-start;
-
     gap: 1rem;
-
-    padding: 1.4rem;
-
+    align-items: flex-start;
+    padding: 1rem;
     background: #fff;
-
-    border-radius: 22px;
-
-    box-shadow: 0 12px 30px rgba(0, 0, 0, .06);
-
-    transition: .35s;
-
-    border: 1px solid transparent;
-
+    border-radius: 18px;
+    border: 1px solid #ececec;
+    transition: .35s ease;
 }
 
-.highlight-card:hover {
+.feature:hover {
 
-    transform: translateX(10px);
+    transform: translateY(-6px);
 
-    border-color: rgba(46, 125, 50, .2);
+    border-color: rgba(46, 125, 50, .25);
 
-    box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
-
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .08);
 }
 
-.highlight-card svg {
+.feature svg {
 
     width: 34px;
 
@@ -216,56 +133,1075 @@
 
     flex-shrink: 0;
 
+    margin-top: 4px;
 }
 
-.highlight-card h4 {
+.feature h4 {
+
     margin-bottom: .35rem;
-    font-size: 1.15rem;
-    color: #1f2937;
+
 }
 
-.highlight-card p {
-    color: #6b7280;
-    line-height: 1.7;
+.feature p {
     margin: 0;
+    color: #666;
+    line-height: 1.7;
+
 }
 
-/* ==========================
-   Learn More Link
-========================== */
-.about-link {
+/* Link */
+
+.about-btn {
+
     display: inline-flex;
+
     align-items: center;
-    gap: .75rem;
-    margin-top: 1rem;
+
+    gap: .8rem;
+
+    margin-top: 2rem;
+
     font-weight: 700;
+
     color: var(--primary-color);
-    text-decoration: none;
+
     transition: .3s;
 }
 
-.about-link:hover {
-    gap: 1.1rem;
+.about-btn:hover {
+
+    gap: 1.2rem;
 }
 
-/* ==========================
-   Responsive
-========================== */
-@media (max-width: 992px) {
+/*====================================
+FOCUS AREAS
+====================================*/
 
-    .about-grid {
+.focus {
+
+    padding: 8rem 0;
+
+    background: #fff;
+
+}
+
+.focus-list {
+
+    margin-top: 5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2.5rem;
+
+}
+
+.focus-card {
+
+    position: relative;
+
+    width: 70%;
+
+    padding: 2.5rem;
+
+    background: #fff;
+
+    border-radius: 28px;
+
+    border: 1px solid #ececec;
+
+    overflow: hidden;
+
+    transition: .35s;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .05);
+
+}
+
+.focus-card.left {
+
+    margin-right: auto;
+
+}
+
+.focus-card.right {
+
+    margin-left: auto;
+
+}
+
+.focus-icon {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 20px;
+
+    opacity: .08;
+
+}
+
+.focus-icon svg {
+
+    width: 90px;
+
+    height: 90px;
+
+    color: var(--primary-color);
+
+}
+
+.focus-card h3 {
+
+    position: relative;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 1rem;
+
+}
+
+.focus-card p {
+
+    position: relative;
+
+    color: #666;
+
+    line-height: 1.8;
+
+    max-width: 85%;
+
+}
+
+.focus-card a {
+
+    position: relative;
+
+    margin-top: 2rem;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: .7rem;
+
+    color: var(--primary-color);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+
+.focus-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .12);
+
+    border-color: rgba(46, 125, 50, .25);
+
+}
+
+.focus-card:hover .focus-icon {
+
+    transform: rotate(-12deg) scale(1.15);
+
+    transition: .4s;
+
+}
+
+.focus-card:hover a {
+
+    gap: 1rem;
+
+}
+
+/*=====================================
+LEADERSHIP
+=====================================*/
+
+.leadership {
+
+    padding: 8rem 0;
+
+    background: #f6fff6;
+
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+
+}
+
+.leader-card:nth-child(1) {
+    grid-column: 1 / span 2;
+}
+
+.leader-card:nth-child(2) {
+    grid-column: 3 / span 2;
+}
+
+.leader-card:nth-child(3) {
+    grid-column: 5 / span 2;
+}
+
+.leader-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.leader-card:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.leader-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
+    transition: .35s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100%;
+}
+
+.leader-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: rgba(46, 125, 50, .25);
+
+    box-shadow: 0 25px 50px rgba(0, 0, 0, .1);
+
+}
+
+.leader-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.leader-card h3 {
+    margin: .5rem 0;
+    font-size: 1.45rem;
+}
+
+.leader-card span {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.leader-card p {
+    line-height: 1.7;
+    color: #666;
+}
+
+/*====================================
+VISION & VALUES
+====================================*/
+
+.values {
+
+    padding: 8rem 0;
+
+    background: #fff;
+
+}
+
+.vision-card {
+
+    max-width: 800px;
+
+    margin: 4rem auto;
+
+    padding: 3rem;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background: #f8f8f4;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .05);
+
+}
+
+.vision-card svg {
+
+    width: 55px;
+
+    height: 55px;
+
+    color: var(--primary-color);
+
+    margin-bottom: 1rem;
+
+}
+
+.vision-card h3 {
+
+    margin-bottom: 1rem;
+
+    font-size: 2rem;
+
+}
+
+.vision-card p {
+
+    color: #666;
+
+    line-height: 1.8;
+
+}
+
+.values-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 1.5rem;
+
+}
+
+.value-card {
+
+    background: #fff;
+
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    border: 1px solid #ececec;
+
+    transition: .35s;
+
+}
+
+.value-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: rgba(46, 125, 50, .2);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+}
+
+.value-card svg {
+
+    width: 42px;
+
+    height: 42px;
+
+    color: var(--primary-color);
+
+    margin-bottom: 1rem;
+
+}
+
+/*=========================================
+OUR IMPACT
+=========================================*/
+
+.impact {
+
+    padding: 8rem 0;
+
+    background: #f8fbf7;
+
+}
+
+.impact-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+
+    margin-top: 4rem;
+
+}
+
+/*=========================================
+CARD
+=========================================*/
+
+.impact-card {
+
+    position: relative;
+
+    height: 420px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .08);
+
+}
+
+.impact-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .7s ease;
+
+}
+
+.impact-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .28);
+
+    transition: .45s;
+
+    z-index: 1;
+
+}
+
+/*=========================================
+Overlay
+=========================================*/
+
+.impact-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 2.5rem;
+
+    background: rgba(255, 255, 255, .97);
+
+    backdrop-filter: blur(10px);
+
+    clip-path: polygon(50% 50%,
+            50% 50%,
+            50% 50%,
+            50% 50%,
+            50% 50%,
+            50% 50%);
+
+    transition: clip-path .55s cubic-bezier(.19, 1, .22, 1);
+
+}
+
+/*=========================================
+Hover Shape
+=========================================*/
+
+.impact-card:hover .impact-overlay {
+
+    clip-path: polygon(18% 0%,
+
+            100% 0%,
+
+            100% 82%,
+
+            82% 100%,
+
+            0% 100%,
+
+            0% 18%);
+
+}
+
+/*=========================================
+Image
+=========================================*/
+
+.impact-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.impact-card:hover::before {
+
+    background: rgba(0, 0, 0, .45);
+
+}
+
+/*=========================================
+Content
+=========================================*/
+
+.impact-content {
+
+    text-align: center;
+
+    max-width: 280px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: .35s;
+
+    transition-delay: 0s;
+
+}
+
+.impact-card:hover .impact-content {
+
+    opacity: 1;
+
+    transform: none;
+
+    transition-delay: .28s;
+
+}
+
+/*=========================================
+Icon
+=========================================*/
+
+.impact-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: rgba(46, 125, 50, .1);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 1.3rem;
+
+}
+
+.impact-icon svg {
+
+    width: 34px;
+
+    height: 34px;
+
+    color: var(--primary-color);
+
+}
+
+.impact-content h3 {
+
+    font-size: 1.7rem;
+
+    margin-bottom: 1rem;
+
+    color: #1e293b;
+
+}
+
+.impact-content p {
+
+    line-height: 1.8;
+
+    color: #666;
+
+}
+
+/*=========================================
+CONTACT + CTA
+=========================================*/
+
+.contact-cta {
+
+    padding: 8rem 0;
+
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.contact-cta::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .06);
+    top: -180px;
+    left: -120px;
+}
+
+.contact-cta::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .06);
+    top: 70%;
+    left: 85%;
+}
+
+
+.contact-wrapper {
+
+    display: grid;
+
+    grid-template-columns: 1fr 500px;
+
+    gap: 5rem;
+
+    align-items: center;
+
+}
+
+.contact-info h2 {
+
+    font-size: clamp(2.5rem, 5vw, 3.6rem);
+
+    margin: 1rem 0 1.5rem;
+
+    color: white;
+
+}
+
+.contact-info>p {
+
+    color: rgba(255, 255, 255, .85);
+
+    line-height: 1.9;
+
+    margin-bottom: 3rem;
+
+}
+
+.contact-options {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+}
+
+.contact-item {
+
+    display: flex;
+
+    gap: 1rem;
+
+    align-items: flex-start;
+
+}
+
+.contact-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, .12);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+}
+
+.contact-icon svg {
+
+    width: 28px;
+
+    height: 28px;
+
+}
+
+.contact-item h4 {
+
+    margin-bottom: .4rem;
+
+    color: white;
+
+}
+
+.contact-item p {
+
+    color: rgba(255, 255, 255, .75);
+
+    margin: 0;
+
+}
+
+.contact-details {
+
+    margin-top: 3rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+}
+
+.contact-details div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+.contact-details svg {
+
+    width: 20px;
+
+    height: 20px;
+
+}
+
+/*=========================================
+FORM
+=========================================*/
+
+.contact-form-card {
+
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 3rem;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .25);
+
+}
+
+.form-group {
+
+    margin-bottom: 1.4rem;
+
+}
+
+.form-group input,
+
+.form-group textarea {
+
+    width: 100%;
+
+    border: none;
+
+    background: #f5f6f8;
+
+    border-radius: 15px;
+
+    padding: 1rem 1.2rem;
+
+    font-size: 1rem;
+
+    transition: .3s;
+
+}
+
+.form-group input:focus,
+
+.form-group textarea:focus {
+
+    outline: none;
+
+    background: white;
+
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, .25);
+
+}
+
+.contact-form-card .btn {
+
+    width: 100%;
+
+    padding: 1rem;
+
+    font-size: 1rem;
+
+}
+
+/*=========================================
+Responsive
+=========================================*/
+/* Tablet */
+
+@media(max-width:992px) {
+
+    .contact-wrapper {
+
         grid-template-columns: 1fr;
+
+        gap: 4rem;
+
+    }
+
+    .impact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .impact-card {
+
+        height: 350px;
+
+    }
+
+
+    .leadership-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .leader-card:nth-child(1),
+    .leader-card:nth-child(2),
+    .leader-card:nth-child(3),
+    .leader-card:nth-child(4),
+    .leader-card:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .values-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .leader-card {
+
+        max-width: 450px;
+
+        margin: auto;
+
+    }
+
+    .about-wrapper {
+
+        grid-template-columns: 1fr;
+
         gap: 3rem;
+
+    }
+
+    .about-image img {
+
+        height: 500px;
+
+    }
+
+    .focus-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .wide {
+
+        grid-column: span 1;
+
+    }
+
+    .focus-image {
+
+        order: -1;
+
+    }
+
+    .leadership-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+    }
+
+    .leader-card {
+
+        max-width: 450px;
+
+        margin: auto;
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px) {
+    .contact-cta {
+
+        padding: 5rem 0;
+
+    }
+
+    .contact-form-card {
+
+        padding: 2rem;
+
+    }
+
+    .impact {
+
+        padding: 5rem 0;
+
+    }
+
+    .impact-card {
+
+        height: 300px;
+
+    }
+
+    .impact-overlay {
+
+        padding: 1.5rem;
+
+    }
+
+    .impact-content h3 {
+
+        font-size: 1.3rem;
+
+    }
+
+    .impact-content p {
+
+        font-size: .95rem;
+
+    }
+
+
+    .values-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .about {
+
+        padding: 6rem 0;
+
+    }
+
+    .about-wrapper {
+
+        gap: 2.5rem;
+
     }
 
     .about-content {
+
         text-align: center;
+
     }
 
-    .about-badge {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 85%;
+    .about-content h3 {
+
+        font-size: 2rem;
+
+    }
+
+    .feature {
+
+        text-align: left;
+
+    }
+
+    .about-btn {
+
         justify-content: center;
+
+    }
+
+    .about-image img {
+
+        height: 380px;
+
+    }
+
+    .focus-card {
+
+        width: 100%;
+
+    }
+
+    .focus-card p {
+
+        max-width: 100%;
+
+    }
+
+    .leadership-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .leader-card {
+        padding: 2rem 1.25rem;
+    }
+
+    .leader-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .leader-card h3 {
+        font-size: 1.3rem;
     }
 }

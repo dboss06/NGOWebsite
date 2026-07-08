@@ -1,36 +1,51 @@
 // ===============================
 // Mobile Navigation
 // ===============================
+// Mobile Navigation
+
 const navToggle = document.querySelector(".nav-toggle");
-const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelector(".nav-links");
+
 navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+
+    navLinks.classList.toggle("active");
+
 });
-// ===============================
-// Scroll Animations
-// ===============================
+
+// Header Scroll
+
 const header = document.querySelector(".header");
+
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 40) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
+
+    header.classList.toggle("scrolled", window.scrollY > 40);
+
 });
 const observer = new IntersectionObserver((entries) => {
+
     entries.forEach(entry => {
-        entry.target.classList.toggle(
-            "show",
-            entry.isIntersecting
-        );
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
     });
+
 }, {
     threshold: 0.15
 });
-document.querySelectorAll(
-    ".fade-up, .fade-down, .fade-left, .fade-right, .zoom-in"
-).forEach(el => observer.observe(el));
 
+const reveals = document.querySelectorAll(
+    ".fade-up, .fade-down, .fade-left, .fade-right, .zoom-in"
+);
+
+reveals.forEach(el => observer.observe(el));
+
+reveals.forEach((el, index) => {
+    el.style.transitionDelay = `${index * 10}ms`;
+});
 // ===============================
 // Lucide Icons
 // ===============================
@@ -109,3 +124,125 @@ heroDots.forEach((dot, index) => {
 });
 updateHero(currentSlide);
 startSlider();
+const sections = document.querySelectorAll("section[id]");
+const navItems = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const top = section.offsetTop - 150;
+        const height = section.offsetHeight;
+
+        if (window.scrollY >= top) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navItems.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+
+    });
+
+});
+const backTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 500) {
+
+        backTop.classList.add("show");
+
+    } else {
+
+        backTop.classList.remove("show");
+
+    }
+
+});
+
+backTop.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+window.addEventListener("load", () => {
+    const loader = document.getElementById("preloader");
+    const page = document.getElementById("page-content");
+    setTimeout(() => {
+        loader.classList.add("hide");
+        page.classList.add("show");
+    }, 1800);
+});
+const form = document.getElementById("contactForm");
+const submitBtn = document.getElementById("submitBtn");
+
+const modal = document.getElementById("successModal");
+const closeBtn = document.getElementById("closeModal");
+
+form.addEventListener("submit", async function (e) {
+
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    try {
+
+        const response = await fetch(form.action, {
+
+            method: "POST",
+
+            body: new FormData(form),
+
+            headers: {
+                Accept: "application/json"
+            }
+
+        });
+
+        if (response.ok) {
+
+            form.reset();
+
+            modal.classList.add("show");
+
+            lucide.createIcons();
+
+        } else {
+
+            alert("Unable to send message. Please try again.");
+
+        }
+
+    }
+    catch {
+
+        alert("Network error. Please try again.");
+
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send Message";
+
+});
+
+closeBtn.addEventListener("click", () => {
+
+    modal.classList.remove("show");
+
+});

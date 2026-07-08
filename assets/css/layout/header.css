@@ -1,147 +1,233 @@
-/* ==========================================================
+/* ===========================================
    HEADER
-========================================================== */
+=========================================== */
+
 .header {
+
     position: fixed;
-    top: 0;
-    left: 0;
+
+    inset: 0 0 auto 0;
+
     width: 100%;
+
     z-index: 1000;
-    transition: .4s ease;
-    background: rgba(211, 210, 210, 0.92);
-    opacity: 30px;
+
+    transition: .35s;
+
+    background: rgba(255, 255, 255, .82);
+
+    backdrop-filter: blur(18px);
+
 }
 
 .header.scrolled {
-    background: rgba(255, 255, 255, .92);
-    backdrop-filter: blur(18px);
-    box-shadow: var(--shadow-sm);
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .08);
+
 }
+
+/* ========================= */
 
 .navbar {
-    margin-top: 10px;
-    height: var(--header-height);
+
+    height: 85px;
+
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
+
+    justify-content: space-between;
+
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+/* ========================= */
 
 .logo img {
-    height: 100px;
-    width: auto;
+
+    height: 72px;
+
+    display: block;
+
 }
 
-.logo-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.logo-content h2 {
-    font-size: 1rem;
-    line-height: 1;
-    margin-bottom: .2rem;
-}
-
-.logo-content span {
-    color: var(--text-secondary);
-    font-size: .8rem;
-}
-
-.nav-menu {
-    display: flex;
-}
+/* ========================= */
 
 .nav-links {
+
     display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 10px;
+
+    gap: 2.5rem;
+
+    list-style: none;
+
 }
 
 .nav-links a {
-    position: relative;
-    font-size: 1.3rem;
-    font-weight: 600;
-    transition: color .3s ease, transform .3s ease;
-}
 
-.nav-links a:hover {
-    color: var(--primary-color);
-    transform: translateY(-2px);
+    font-weight: 600;
+
+    color: var(--text-color);
+
+    text-decoration: none;
+
+    position: relative;
+
+    transition: .3s;
 
 }
 
 .nav-links a::after {
+
     content: "";
+
     position: absolute;
+
     left: 0;
+
     bottom: -6px;
+
     width: 0;
+
     height: 2px;
+
     background: var(--primary-color);
+
     transition: .3s;
+
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
+.nav-links a:hover {
+
+    color: var(--primary-color);
+
+}
+
+.nav-links a:hover::after {
+
     width: 100%;
+
 }
 
-.nav-right {
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* ========================= */
+
+.nav-actions {
+
     display: flex;
+
     align-items: center;
+
     gap: 1rem;
+
 }
 
 .cta-btn {
-    padding: 1rem 2rem;
-    margin-bottom: 10px;
+
+    padding: .9rem 2rem;
+
 }
+
+/* ========================= */
 
 .nav-toggle {
+
     display: none;
-    width: 46px;
-    height: 46px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
     border-radius: 50%;
-    background: var(--white);
-    box-shadow: var(--shadow-sm);
-    justify-content: center;
+
+    background: #fff;
+
+    cursor: pointer;
+
     align-items: center;
+
+    justify-content: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+
 }
 
+/* =====================================
+   TABLET
+===================================== */
+
 @media(max-width:992px) {
+
+    .navbar {
+
+        height: 80px;
+
+    }
+
+    .logo img {
+
+        height: 60px;
+
+    }
+
     .nav-toggle {
+
         display: flex;
+
     }
 
-    .nav-menu {
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 2rem;
-        transform: translateY(-120%);
-        transition: .4s;
-        box-shadow: var(--shadow-md);
-    }
+    .cta-btn {
 
-    .nav-menu.active {
-        transform: translateY(0);
+        display: none;
+
     }
 
     .nav-links {
+
+        position: fixed;
+
+        top: 80px;
+
+        left: -100%;
+
+        width: 100%;
+
+        background: rgba(255, 255, 255, .82);
+
         flex-direction: column;
-        align-items: flex-start;
+
+        gap: 2rem;
+
+        padding: 2rem;
+
+        transition: .35s;
+
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+
     }
 
-    .nav-right .btn {
-        display: none;
+    .nav-links.active {
+
+        left: 0;
+
     }
+
+}
+
+/* =====================================
+   PHONE
+===================================== */
+
+@media(max-width:576px) {
+
+    .logo img {
+
+        height: 54px;
+
+    }
+
 }

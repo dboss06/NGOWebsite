@@ -1,0 +1,162 @@
+/*======================================
+PRELOADER
+======================================*/
+
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    transition: opacity .8s ease, visibility .8s ease;
+
+}
+
+#preloader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    position: relative;
+    text-align: center;
+}
+
+.loader img {
+    margin-left: 8.5rem;
+    margin-top: -1rem;
+    width: 300px;
+    position: relative;
+    z-index: 2;
+    animation: logoScale 1.5s ease forwards;
+}
+
+.loader h2 {
+    margin-top: 2rem;
+    color: var(--primary-color);
+    opacity: 0;
+    animation: textFade .8s ease forwards;
+    animation-delay: .6s;
+}
+
+.loader p {
+
+    color: #666;
+
+    margin-top: .6rem;
+
+    opacity: 0;
+
+    animation: textFade .8s ease forwards;
+
+    animation-delay: .9s;
+
+}
+
+.loader-ring {
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: rgba(76, 175, 80, .15);
+
+    left: 50%;
+
+    top: 55px;
+
+    transform: translate(-50%, -50%);
+
+    animation: ringPulse 2s infinite;
+
+}
+
+.loader-ring::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(46, 125, 50, .15);
+    animation: ring 2s infinite .6s;
+}
+
+@keyframes ringPulse {
+
+    0% {
+
+        transform: translate(-50%, -50%) scale(.8);
+
+        opacity: .8;
+
+    }
+
+    70% {
+
+        transform: translate(-50%, -50%) scale(1.8);
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+    }
+
+}
+
+@keyframes logoScale {
+
+    0% {
+
+        transform: scale(.75);
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes textFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: none;
+
+    }
+
+}
+
+#page-content {
+    opacity: 0;
+    transition: opacity .8s ease;
+}
+
+#page-content.show {
+    opacity: 1;
+}
